@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="workout-shop.css">
+    <link rel="stylesheet" type="text/css" href="HomeStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <span><img aria-label="Logo Text" src="./images/workoutGuideLogo.png"></img></span>
+
+        <span>
+            <div class="hamburger dropdown">
+                <i class="fa fa-bars"></i>
+                <div class="dropdown-content">
+                    <a href="./home.html">Home</a>
+
+                    <a href="./exercises/biceps.html">Biceps</a>
+                    <a href="./exercises/triceps.html">Triceps</a>
+                    <a href="./exercises/chest.html">Chest</a>
+                    <a href="./exercises/shoulders.html">Shoulders</a>
+                    <a href="./exercises/legs.html">Legs</a>
+
+                    <a href="./guide.html">Workouts</a>
+                    <a href="./about.html">About</a>
+                    <a href="./workout-shop.html">Shop</a>
+
+                </div>
+
+            </div>
+        </span>
+        <ul class="header-links">
+            <li><a href="./home.html">Home</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Exercises
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./exercises/biceps.html">Biceps</a>
+                        <a href="./exercises/triceps.html">Triceps</a>
+                        <a href="./exercises/chest.html">Chest</a>
+                        <a href="./exercises/shoulders.html">Shoulders</a>
+                        <a href="./exercises/legs.html">Legs</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="./guide.html">Workouts</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./workout-shop.html">Shop</a></li>
+        </ul>
+        <div>
+            <img aria-label="Logo Image" class="logo" src="./images/Gym-Transparent.png"></img>
+        </div>
+    </div>
+    <script id="card_template" type="text/template">
+        <div class="flex">
+        {{#.}}
+            <div class="mypanel">
+                <img src={{url}}>
+                <!-- <a>{{id}}</a> -->
+                <a>{{name}}</a>
+                <a>${{price}}</a>
+                <img src={{url}}>
+            </div>
+        {{/.}}    
+        </div>
+
+        </script>
+    <h2>Workout Shop</h2>
+    <div id="mypanel"></div>
+    <script>
+        function item(id, name, price, url) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.url = url
+        }
+        var items = [];
+        items.push(new item("0001", "Workout Gloves", "10.99", "./shop-images/gloves.jpg"));
+        items.push(new item("0002", "Shaker Bottle", "6.99", "./shop-images/shaker.png"));
+        items.push(new item("0003", "Protein, 5lbs", "34.99", "./shop-images/protein.png"));
+        items.push(new item("0004", "Preworkout Powder", "24.99", "./shop-images/preworkout.jpg"));
+        items.push(new item("0005", "Tank Top", "14.99", "./shop-images/tank.jpg"));
+
+        items.push(new item("0006", "Weights", "74.99", "./shop-images/weights.jpg"));
+        items.push(new item("0007", "Kettle Bell", "33.99", "./shop-images/kettle.jpg"));
+        items.push(new item("0008", "Punching Bag", "34.99", "./shop-images/bag.jpg"));
+        items.push(new item("0009", "Running Shoes", "84.99", "./shop-images/shoe.jpg"));
+        items.push(new item("0010", "Jump Rope", "14.99", "./shop-images/rope.jpg"));
+        var template = $("#card_template").html();
+        var text = Mustache.render(template, items);
+
+        $("#mypanel").html(text);
+    </script>
+
+</body>
+
+</html>

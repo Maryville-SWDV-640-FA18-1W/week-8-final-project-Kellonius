@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="HomeStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <span><img aria-label="Logo Text" src="./images/workoutGuideLogo.png"></img></span>
+
+        <span>
+            <div class="hamburger dropdown">
+                <i class="fa fa-bars"></i>
+                <div class="dropdown-content">
+                    <a href="./home.html">Home</a>
+
+                    <a href="./exercises/biceps.html">Biceps</a>
+                    <a href="./exercises/triceps.html">Triceps</a>
+                    <a href="./exercises/chest.html">Chest</a>
+                    <a href="./exercises/shoulders.html">Shoulders</a>
+                    <a href="./exercises/legs.html">Legs</a>
+
+                    <a href="./guide.html">Workouts</a>
+                    <a href="./about.html">About</a>
+                    <a href="./workout-shop.html">Shop</a><
+
+                </div>
+
+            </div>
+        </span>
+        <ul class="header-links">
+            <li><a href="./home.html">Home</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Exercises
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./exercises/biceps.html">Biceps</a>
+                        <a href="./exercises/triceps.html">Triceps</a>
+                        <a href="./exercises/chest.html">Chest</a>
+                        <a href="./exercises/shoulders.html">Shoulders</a>
+                        <a href="./exercises/legs.html">Legs</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="./guide.html">Workouts</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./workout-shop.html">Shop</a></li>
+        </ul>
+        <div>
+            <img aria-label="Logo Image" class="logo" src="./images/Gym-Transparent.png"></img>
+        </div>
+    </div>
+
+    <div class="w3-content" style="max-width:100%;">
+
+        <!-- Automatic Slideshow Images -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="./images/kettlebell.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Working</h3>
+                <p><b>On Yourself, For Yourself, By Yourself</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="./images/deadlift-lead-picture.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Dedication</h3>
+                <p><b>When you feel like quitting, think about why you started.</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="./images/pushup.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Pick your hard</h3>
+                <p><b>Losing weight is hard, being fat is hard. You choose.</b></p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="w3-container  w3-padding-16">
+        <!-- w3-center w3-content-->
+        <div class="card left">
+            <h2 class="padding">Crossfit Workout of the Day:</h2>
+            <p class="padding">
+                Tabata push jerk<br />
+                Rest 3 minutes<br />
+                Tabata chest-to-bar pull-up<br />
+                Rest 3 minutes<br />
+                Tabata push-up<br />
+                Rest 3 minutes<br />
+                Tabata hang power snatch<br />
+                <br />
+                The Tabata interval is 20 seconds of work followed by 10 seconds of rest for 8 intervals.<br />
+                <br />
+                Men: 95 lb.<br />
+                Women: 65 lb.<br />
+            </p>
+        </div>
+        <div class="card right">
+
+            <h2 class="padding">Scaling<br /></h2>
+            <p class="padding">
+                The rest periods should allow you to be mostly recovered and approach the next exercise with
+                intensity. Scale the loading and movements to a level that allows you to work for the full 20
+                seconds during the first few intervals.<br />
+                <br />
+                Intermediate Option<br />
+                Tabata push jerk<br />
+                Rest 3 minutes<br />
+                Tabata pull-up<br />
+                Rest 3 minutes<br />
+                Tabata push-up<br />
+                Rest 3 minutes<br />
+                Tabata hang power snatch<br />
+                <br />
+                Men: 75 lb.<br />
+                Women: 55 lb.<br />
+                <br />
+                Beginner Option<br />
+                Tabata push jerk<br />
+                Rest 3 minutes<br />
+                Tabata jumping pull-up<br />
+                Rest 3 minutes<br />
+                Tabata knee push-up<br />
+                Rest 3 minutes<br />
+                Tabata hang power snatch<br />
+                <br />
+                Men: 45 lb.<br />
+                Women: 35 lb.<br />
+            </p>
+        </div>
+    </div>
+
+    <!-- <div class="footer"> -->
+    <div class="w3-container w3-center footer">
+        <p>Roger Beasley for Maryville University SWDV 640.</p>
+    </div>
+
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
